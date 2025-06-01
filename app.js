@@ -62,6 +62,20 @@
       <svg viewBox="0 0 24 24"><path fill="white" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.36 11.36 0 003.58.57 1 1 0 011 1v3.64a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.64a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.05l-2.35 2.16z"/></svg>
       <span>Позвонить</span>
     `;
+    btn.addEventListener("click", function () {
+  // Google Analytics (gtag.js)
+  if (typeof gtag === "function") {
+    gtag("event", "click", {
+      event_category: "call_widget",
+      event_label: "Нажатие кнопки 'Позвонить'",
+    });
+  }
+
+  // Яндекс.Метрика (ID: 87947650)
+  if (typeof ym === "function") {
+    ym(87947650, 'reachGoal', 'call_button_by_Dimitri');
+  }
+});
     document.body.appendChild(btn);
   });
 })();
