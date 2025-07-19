@@ -7,7 +7,7 @@
       #call-button {
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        left: 20px;
         z-index: 9999;
         height: 42px;
         background-color: #6cc24a;
